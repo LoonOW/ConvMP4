@@ -75,7 +75,7 @@ class Dl {
 				return(false);
 			};
 			await page.keyboard.type(name);
-			console.log(" {".cyan.bgMagenta + name.cyan.bgMagenta.bold + "} ".cyan.bgMagenta + " : " + "[==30%-------]".blue + "<--_____--Try to find the song URL--_____-->".yellow);
+			console.log(" {".cyan.bgMagenta + name.cyan.bgMagenta.bold + "} ".cyan.bgMagenta + " : " + "[==30%-------]".blue + "<--_____--Try to find the video URL--_____-->".yellow);
 
 			//Submit the search
 			await page.waitFor(500);
@@ -102,7 +102,7 @@ class Dl {
 			})
 			.catch(function (e) {
 				console.log("\\i/".green.bold + " {".cyan.bgMagenta + name.cyan.bgMagenta.bold + "} ".cyan.bgMagenta + " : Download failed " + "[_FAILED_]".red.bold);
-				console.log("/!\\ ".red + " {".cyan.bgMagenta + name.cyan.bgMagenta.bold + "} ".cyan.bgMagenta + " " + "ERROR :".red.underline + " Le vidéo Youtube n'est pas accessible /|\\ ".red + " " + e.toString().red);
+				console.log("/!\\ ".red + " {".cyan.bgMagenta + name.cyan.bgMagenta.bold + "} ".cyan.bgMagenta + " " + "ERROR :".red.underline + " La vidéo Youtube n'est pas accessible /|\\ ".red + " " + e.toString().red);
 		    	openSubl();
 		    	return(false);
 			});
