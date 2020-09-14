@@ -47,6 +47,7 @@ class Dl {
 
 			//Open a page with Youtube
 			const page = await browser.newPage();
+			page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36');
 			console.log(" {".cyan.bgMagenta + name.cyan.bgMagenta.bold + "} ".cyan.bgMagenta + " : " + "[10%---------]".blue + "<--_____--Start Youtube--_____-->".yellow);
 			var errorback = await page.goto('https://www.youtube.com/')
 			.catch(function (e) {
@@ -96,6 +97,7 @@ class Dl {
 			//Clic on the video and get the url
 			console.log(" {".cyan.bgMagenta + name.cyan.bgMagenta.bold + "} ".cyan.bgMagenta + " : " + "[====50%-----]".blue + "<--_____--Youtube video find--_____-->".yellow);
 			await page.waitFor(1000);
+			await page.screenshot({path: 'C:\\Users\\Corentin\\Documents\\dev\\ConvMP4buddy-screenshot.png'});
 			var errorback = await page.evaluate(() => {
 				const obj = document.querySelector('a[id="video-title"]');
 				obj.click();
